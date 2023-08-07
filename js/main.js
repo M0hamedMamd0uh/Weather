@@ -63,7 +63,7 @@ if (navigator.geolocation) {
 
 async function getData(apiMethod, parameter, days) {
   let myReq = await fetch(
-    `http://api.weatherapi.com/v1/${apiMethod}.json?key=03494007fe874e5587e132847230408&q=${parameter}&days=${days}`
+    `https://api.weatherapi.com/v1/${apiMethod}.json?key=03494007fe874e5587e132847230408&q=${parameter}&days=${days}`
   );
   let myData = await myReq.json();
   return myData;
