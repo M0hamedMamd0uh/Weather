@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="shortcut icon" href="images/cloudy.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body class="">
+    <div class="conatiner">
+      <div class="row gx-0">
+        <div class="col-md-6 col-lg-7 col-xl-8">
+          <div class="item-bg bg-secondary vh-100">
+            <div class="head">
+              <p class="logo m-0 text-white">
+                Weather<span class="fw-bold text-danger">.</span>
+              </p>
+              <div>
+                <p class="lead text-white m-0 text-center">
+                  <i class="fa-solid fa-location-dot fa-xs"></i>
+                  <span id="country">UnKnown</span>
+                </p>
+                <!-- <p class="lead text-white m-0 text-center mt-3">
+                  <i class="fa-solid fa-earth-africa fa-xs"></i>
+                  <span id="continent">UnKnown</span>
+                </p> -->
+              </div>
+            </div>
+            <div class="content">
+              <p class="temp"><span id="temp">00</span><sup>°</sup></p>
+              <div class="location">
+                <div>
+                  <p id="city">Cairo</p>
+                  <p id="cityTime">00:00 - Friday, 4 Aug 2023</p>
+                </div>
+                <div>
+                  <img
+                    src="images/cloudy.png"
+                    class="w-25"
+                    alt=""
+                    id="weatherStatusImg"
+                  />
+                  <span id="weatherStatus">Sunny</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info col-md-6 col-lg-5 col-xl-4">
+          <div class="item p-4">
+            <div class="inputSection position-relative">
+              <input
+                type="text"
+                class="form-control w-100 border-0 border-bottom border-1 rounded-0 ps-4 pe-5"
+                placeholder="another Location (at least 3 characters)"
+                id="inputValue"
+              />
+              <span
+                class="fa-solid fa-magnifying-glass position-absolute"
+              ></span>
+            </div>
+
+            <p class="pt-5 lead text-white">Weather details :</p>
+            <div class="d-flex flex-column text-white px-5">
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span><i class="fa-solid fa-cloud"></i> Cloudy</span>
+                <span id="cloudy">0%</span>
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span><i class="fa-solid fa-droplet"></i> Humidity</span>
+                <span id="humidity">0%</span>
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span><i class="fa-solid fa-wind"></i> Wind</span>
+                <span id="wind">0 Km/h</span>
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span><i class="fa-solid fa-sun"></i> UV</span>
+                <span id="uv">0</span>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <div class="item p-4">
+            <p class="lead text-white">Weather Forecast :</p>
+            <div class="d-flex flex-column text-white px-5">
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>Today</span>
+                <span
+                  ><span class="fw-bold" id="maxtemp">00</span
+                  ><span><sup>°</sup></span
+                  ><span class="min-temp"
+                    >/<span id="mintemp">00</span
+                    ><span><sup>°</sup></span></span
+                  ></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span id="nextday">Monday</span>
+                <span
+                  ><span class="fw-bold" id="maxtemp">00</span
+                  ><span><sup>°</sup></span
+                  ><span class="min-temp"
+                    >/<span id="mintemp">00</span
+                    ><span><sup>°</sup></span></span
+                  ></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span id="nextnextday">Friday</span>
+                <span
+                  ><span class="fw-bold" id="maxtemp">00</span
+                  ><span><sup>°</sup></span
+                  ><span class="min-temp">/<span id="mintemp">00</span></span
+                  ><span><sup>°</sup></span></span
+                >
+              </div>
+
+              <hr />
+            </div>
+          </div>
+          <div class="item p-4">
+            <p class="lead text-white">Today Forecast :</p>
+            <div class="d-flex flex-column text-white px-5">
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>12:00 AM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>3:00 AM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>6:00 AM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>9:00 AM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>12:00 PM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>3:00 PM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>6:00 PM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-content-center"
+              >
+                <span>9:00 PM</span>
+                <span class="fw-semibold"
+                  ><span id="tempForecast">00</span><sup>°</sup></span
+                >
+              </div>
+
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
